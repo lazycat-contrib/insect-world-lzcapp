@@ -13,9 +13,19 @@ permissions:
 
 jobs:
   lazycat:
-    uses: ca-x/lazycat-github-action/.github/workflows/lazycat.yml@v1
-    with:
-      operation: build
-      config: .github/lazycat-action.yml
-      toolchains: node
-      node-version: 22.x
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.x
+          cache: npm
+      - uses: ca-x/lazycat-github-action@v1
+        with:
+          operation: build
+          config: .github/lazycat-action.yml
+      - uses: actions/upload-artifact@v7
+        with:
+          name: insect-world-lpk
+          path: dist/application.lpk
+          if-no-files-found: error
