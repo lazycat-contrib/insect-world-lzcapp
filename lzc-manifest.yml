@@ -1,0 +1,9 @@
+application:
+  subdomain: insect-world
+  multi_instance: false
+  routes:
+    - /=file:///lzcapp/pkg/content/dist
+  public_path:
+    - /
+
+usage: Open the application to explore the interactive 3D insect field guide. English content is available under /en/.

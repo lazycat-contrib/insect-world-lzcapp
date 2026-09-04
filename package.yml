@@ -1,0 +1,18 @@
+package: community.lazycat.app.insect-world
+version: 0.2.0
+name: 昆虫世界
+description: Interactive 3D insect field guide with 63 procedurally generated species across 14 orders
+min_os_version: 1.5.0
+homepage: https://github.com/xr843/insect-world
+author: xr843
+license: MIT
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: 昆虫世界
+    description: 可交互的 3D 昆虫图鉴，包含 14 个目、63 个由浏览器实时生成的物种模型
+  en:
+    name: Insect World
+    description: Interactive 3D insect field guide with 63 procedurally generated species across 14 orders
